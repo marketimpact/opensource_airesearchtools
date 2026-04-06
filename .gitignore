@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Data (user-generated, not shipped)
+data/findings.md
+data/findings_index.json
+data/findings_history.json
+data/logs/*.log
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/

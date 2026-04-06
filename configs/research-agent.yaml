@@ -1,0 +1,242 @@
+model: "gemma4:31b"
+ollama_url: "http://localhost:11434"
+
+search:
+  provider: "duckduckgo"
+  max_results_per_query: 10
+  request_delay_seconds: 3
+
+languages:
+  - code: "en"
+    name: "English"
+    region: "wt-wt"
+  - code: "fa"
+    name: "Farsi"
+    region: "ir-fa"
+  - code: "ar"
+    name: "Arabic"
+    region: "xa-ar"
+  - code: "tr"
+    name: "Turkish"
+    region: "tr-tr"
+  - code: "ru"
+    name: "Russian"
+    region: "ru-ru"
+  - code: "zh"
+    name: "Chinese"
+    region: "cn-zh"
+  - code: "fr"
+    name: "French"
+    region: "fr-fr"
+
+categories:
+  - name: "Energy & Oil Markets"
+    queries:
+      en:
+        - "Iran war oil price impact 2026"
+        - "Strait of Hormuz shipping disruption"
+        - "OPEC response Iran conflict oil supply"
+        - "Iran war natural gas Europe energy"
+      fa:
+        - "تأثیر جنگ بر قیمت نفت ایران"
+        - "اختلال در تنگه هرمز کشتیرانی"
+        - "بحران انرژی ایران صادرات نفت"
+      ar:
+        - "تأثير حرب إيران على أسعار النفط 2026"
+        - "اضطراب مضيق هرمز الشحن البحري"
+        - "أوبك إيران إنتاج النفط أزمة"
+      tr:
+        - "İran savaşı petrol fiyatları etkisi"
+        - "Hürmüz Boğazı deniz taşımacılığı krizi"
+      ru:
+        - "война Иран цены на нефть влияние"
+        - "Ормузский пролив судоходство кризис"
+      zh:
+        - "伊朗战争石油价格影响"
+        - "霍尔木兹海峡航运中断"
+      fr:
+        - "guerre Iran prix pétrole impact 2026"
+        - "détroit Ormuz perturbation maritime"
+
+  - name: "Refugee & Humanitarian"
+    queries:
+      en:
+        - "Iran war refugees displacement 2026"
+        - "humanitarian crisis Iran neighboring countries"
+        - "UNHCR Iran conflict refugee numbers"
+        - "Iran war civilian casualties humanitarian aid"
+      fa:
+        - "پناهندگان جنگ ایران آوارگان"
+        - "بحران انسانی ایران کمک های بشردوستانه"
+        - "آوارگی مردم ایران جنگ"
+      ar:
+        - "لاجئون حرب إيران نزوح 2026"
+        - "أزمة إنسانية إيران دول الجوار"
+        - "ضحايا مدنيين إيران مساعدات إنسانية"
+      tr:
+        - "İran savaşı mülteciler insani kriz"
+        - "İran savaşı sivil kayıplar insani yardım"
+      ru:
+        - "война Иран беженцы гуманитарный кризис"
+        - "беженцы из Ирана соседние страны"
+      zh:
+        - "伊朗战争难民人道主义危机"
+        - "伊朗冲突平民伤亡援助"
+      fr:
+        - "guerre Iran réfugiés crise humanitaire 2026"
+        - "déplacés Iran pays voisins aide humanitaire"
+
+  - name: "Supply Chain & Trade"
+    queries:
+      en:
+        - "Iran conflict supply chain disruption global"
+        - "Iran sanctions trade impact 2026"
+        - "Middle East shipping routes disruption Iran war"
+        - "Iran war impact global trade commodities"
+      fa:
+        - "تأثیر جنگ ایران بر زنجیره تأمین جهانی"
+        - "تحریم های ایران تجارت بین المللی"
+      ar:
+        - "حرب إيران اضطراب سلسلة التوريد"
+        - "عقوبات إيران تأثير التجارة العالمية"
+      tr:
+        - "İran savaşı tedarik zinciri küresel ticaret"
+        - "İran yaptırımları ticaret etkisi"
+      ru:
+        - "война Иран цепочки поставок нарушение"
+        - "санкции Иран мировая торговля"
+      zh:
+        - "伊朗冲突全球供应链中断"
+        - "伊朗制裁国际贸易影响"
+      fr:
+        - "guerre Iran perturbation chaîne approvisionnement"
+        - "sanctions Iran impact commerce mondial"
+
+  - name: "Diplomatic & Political"
+    queries:
+      en:
+        - "Iran war diplomatic response international 2026"
+        - "UN Security Council Iran war resolution"
+        - "NATO response Iran conflict"
+        - "Iran war ceasefire negotiations diplomacy"
+      fa:
+        - "واکنش دیپلماتیک بین المللی جنگ ایران"
+        - "شورای امنیت سازمان ملل ایران"
+      ar:
+        - "ردود فعل دبلوماسية حرب إيران"
+        - "مجلس الأمن الدولي إيران قرار"
+        - "مفاوضات وقف إطلاق النار إيران"
+      tr:
+        - "İran savaşı diplomatik tepkiler uluslararası"
+        - "BM Güvenlik Konseyi İran kararı"
+      ru:
+        - "война Иран дипломатическая реакция"
+        - "Совет Безопасности ООН Иран резолюция"
+      zh:
+        - "伊朗战争国际外交反应"
+        - "联合国安理会伊朗决议"
+      fr:
+        - "guerre Iran réponse diplomatique internationale"
+        - "Conseil sécurité ONU Iran résolution"
+
+  - name: "Financial Markets & Sanctions"
+    queries:
+      en:
+        - "Iran war stock market impact global 2026"
+        - "Iran sanctions financial markets effect"
+        - "Iran war gold price safe haven assets"
+        - "Iran conflict currency markets emerging economies"
+      fa:
+        - "تأثیر جنگ ایران بر بازارهای مالی جهان"
+        - "تحریم های ایران بازار ارز"
+      ar:
+        - "تأثير حرب إيران أسواق المال العالمية"
+        - "عقوبات إيران أسعار الذهب ملاذ آمن"
+      tr:
+        - "İran savaşı borsa etkileri küresel"
+        - "İran yaptırımları finansal piyasalar"
+      ru:
+        - "война Иран фондовые рынки влияние"
+        - "санкции Иран финансовые рынки золото"
+      zh:
+        - "伊朗战争全球股市影响"
+        - "伊朗制裁金融市场黄金"
+      fr:
+        - "guerre Iran marchés financiers impact mondial"
+        - "sanctions Iran prix or valeurs refuges"
+
+  - name: "Regional Security"
+    queries:
+      en:
+        - "Iran war impact Middle East stability 2026"
+        - "Iran conflict Hezbollah Lebanon spillover"
+        - "Gulf states response Iran war military"
+        - "Iran war Iraq Syria regional security"
+        - "Israel Iran war escalation"
+      fa:
+        - "تأثیر جنگ ایران بر ثبات خاورمیانه"
+        - "حزب الله لبنان جنگ ایران"
+      ar:
+        - "حرب إيران استقرار الشرق الأوسط"
+        - "حزب الله لبنان تداعيات حرب إيران"
+        - "دول الخليج رد فعل حرب إيران"
+      tr:
+        - "İran savaşı Ortadoğu istikrarı etkisi"
+        - "İran savaşı Hizbullah bölgesel güvenlik"
+      ru:
+        - "война Иран стабильность Ближний Восток"
+        - "Хезболла Ливан Иран конфликт"
+      zh:
+        - "伊朗战争中东稳定影响"
+        - "伊朗冲突真主党地区安全"
+      fr:
+        - "guerre Iran stabilité Moyen-Orient"
+        - "Hezbollah Liban conflit Iran répercussions"
+
+  - name: "Cyber & Information Warfare"
+    queries:
+      en:
+        - "Iran cyber attacks 2026 infrastructure"
+        - "Iran information warfare propaganda"
+        - "Iran internet disruption censorship war"
+        - "Iran war cyber espionage attacks global"
+      fa:
+        - "حملات سایبری ایران زیرساخت"
+        - "جنگ اطلاعاتی ایران اینترنت سانسور"
+      ar:
+        - "هجمات إيران السيبرانية بنية تحتية"
+        - "حرب المعلومات إيران دعاية"
+      tr:
+        - "İran siber saldırılar altyapı 2026"
+        - "İran bilgi savaşı internet sansür"
+      ru:
+        - "Иран кибератаки инфраструктура 2026"
+        - "Иран информационная война пропаганда"
+      zh:
+        - "伊朗网络攻击基础设施"
+        - "伊朗信息战网络间谍"
+      fr:
+        - "Iran cyberattaques infrastructure 2026"
+        - "Iran guerre informationnelle propagande"
+
+schedule:
+  runs_per_day: 6
+  rotate_categories: true
+
+scoring:
+  authority_db: "configs/source-authority.yaml"
+  history_file: "data/findings_history.json"
+  min_composite_score: 2.0
+  history_lookback_days: 30
+  weights:
+    source_reliability: 0.30
+    corroboration: 0.25
+    specificity: 0.20
+    recency: 0.15
+    geographic_relevance: 0.10
+
+paths:
+  findings: "data/findings.md"
+  dedup_index: "data/findings_index.json"
+  history: "data/findings_history.json"
+  log_dir: "data/logs"

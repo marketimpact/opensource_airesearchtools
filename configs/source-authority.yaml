@@ -1,0 +1,340 @@
+# Source Authority Database
+# Curated reliability ratings for the research agent scoring system.
+#
+# tier: 1-5 (maps directly to source_reliability score)
+#   5 = Tier-1 wire service or international body
+#   4 = Major national outlet or government source
+#   3 = Established regional/specialist outlet
+#   2 = Smaller but recognized outlet
+#   1 = Known unreliable or propaganda source
+#
+# geographic_focus: regions this source primarily covers
+
+by_domain:
+  # --- Tier 5: Wire services & international bodies ---
+  "reuters.com":
+    tier: 5
+    geographic_focus: ["Global"]
+  "apnews.com":
+    tier: 5
+    geographic_focus: ["Global"]
+  "afp.com":
+    tier: 5
+    geographic_focus: ["Global"]
+  "un.org":
+    tier: 5
+    geographic_focus: ["Global"]
+  "unhcr.org":
+    tier: 5
+    geographic_focus: ["Global"]
+  "iea.org":
+    tier: 5
+    geographic_focus: ["Global"]
+  "imf.org":
+    tier: 5
+    geographic_focus: ["Global"]
+  "worldbank.org":
+    tier: 5
+    geographic_focus: ["Global"]
+  "iaea.org":
+    tier: 5
+    geographic_focus: ["Global"]
+  "icrc.org":
+    tier: 5
+    geographic_focus: ["Global"]
+  "who.int":
+    tier: 5
+    geographic_focus: ["Global"]
+  "reliefweb.int":
+    tier: 5
+    geographic_focus: ["Global"]
+
+  # --- Tier 4: Major national & international outlets ---
+  # English
+  "bbc.com":
+    tier: 4
+    geographic_focus: ["Global", "Europe"]
+  "bbc.co.uk":
+    tier: 4
+    geographic_focus: ["Global", "Europe"]
+  "cnn.com":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+  "nytimes.com":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+  "washingtonpost.com":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+  "theguardian.com":
+    tier: 4
+    geographic_focus: ["Global", "Europe"]
+  "ft.com":
+    tier: 4
+    geographic_focus: ["Global", "Europe"]
+  "economist.com":
+    tier: 4
+    geographic_focus: ["Global"]
+  "bloomberg.com":
+    tier: 4
+    geographic_focus: ["Global"]
+  "wsj.com":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+  "telegraph.co.uk":
+    tier: 4
+    geographic_focus: ["Global", "Europe"]
+  "independent.co.uk":
+    tier: 4
+    geographic_focus: ["Global", "Europe"]
+
+  # Arabic
+  "aljazeera.com":
+    tier: 4
+    geographic_focus: ["Middle East", "Global"]
+  "aljazeera.net":
+    tier: 4
+    geographic_focus: ["Middle East", "Gulf States"]
+  "alarabiya.net":
+    tier: 4
+    geographic_focus: ["Middle East", "Gulf States"]
+  "skynewsarabia.com":
+    tier: 3
+    geographic_focus: ["Middle East", "Gulf States"]
+
+  # Turkish
+  "trtworld.com":
+    tier: 4
+    geographic_focus: ["Turkey", "Middle East"]
+  "dailysabah.com":
+    tier: 3
+    geographic_focus: ["Turkey"]
+  "hurriyet.com.tr":
+    tier: 3
+    geographic_focus: ["Turkey"]
+  "aa.com.tr":
+    tier: 4
+    geographic_focus: ["Turkey", "Global"]
+  "haberler.com":
+    tier: 2
+    geographic_focus: ["Turkey"]
+  "trthaber.com":
+    tier: 3
+    geographic_focus: ["Turkey"]
+
+  # Russian
+  "tass.com":
+    tier: 3
+    geographic_focus: ["Russia", "Global"]
+  "ria.ru":
+    tier: 3
+    geographic_focus: ["Russia"]
+  "interfax.ru":
+    tier: 3
+    geographic_focus: ["Russia"]
+  "rt.com":
+    tier: 2
+    geographic_focus: ["Russia", "Global"]
+  "kommersant.ru":
+    tier: 3
+    geographic_focus: ["Russia"]
+  "rbc.ru":
+    tier: 3
+    geographic_focus: ["Russia"]
+  "iz.ru":
+    tier: 3
+    geographic_focus: ["Russia"]
+
+  # Chinese
+  "xinhuanet.com":
+    tier: 3
+    geographic_focus: ["China", "Global"]
+  "globaltimes.cn":
+    tier: 2
+    geographic_focus: ["China"]
+  "scmp.com":
+    tier: 4
+    geographic_focus: ["China", "Asia"]
+  "caixin.com":
+    tier: 3
+    geographic_focus: ["China"]
+  "chinadaily.com.cn":
+    tier: 2
+    geographic_focus: ["China"]
+
+  # French
+  "lemonde.fr":
+    tier: 4
+    geographic_focus: ["France", "Europe", "Global"]
+  "france24.com":
+    tier: 4
+    geographic_focus: ["Global", "Africa"]
+  "rfi.fr":
+    tier: 4
+    geographic_focus: ["Global", "Africa"]
+  "lefigaro.fr":
+    tier: 3
+    geographic_focus: ["France", "Europe"]
+  "liberation.fr":
+    tier: 3
+    geographic_focus: ["France"]
+  "20minutes.fr":
+    tier: 3
+    geographic_focus: ["France"]
+  "lesechos.fr":
+    tier: 4
+    geographic_focus: ["France", "Europe"]
+  "europe1.fr":
+    tier: 3
+    geographic_focus: ["France"]
+  "ouest-france.fr":
+    tier: 3
+    geographic_focus: ["France"]
+  "la-croix.com":
+    tier: 3
+    geographic_focus: ["France"]
+  "tf1info.fr":
+    tier: 3
+    geographic_focus: ["France"]
+  "euronews.com":
+    tier: 4
+    geographic_focus: ["Europe", "Global"]
+  "lesoleil.com":
+    tier: 3
+    geographic_focus: ["France", "Africa"]
+
+  # Farsi / Iranian
+  "irna.ir":
+    tier: 3
+    geographic_focus: ["Iran"]
+  "mehrnews.com":
+    tier: 3
+    geographic_focus: ["Iran"]
+  "presstv.ir":
+    tier: 2
+    geographic_focus: ["Iran"]
+  "tasnimnews.com":
+    tier: 3
+    geographic_focus: ["Iran"]
+  "isna.ir":
+    tier: 3
+    geographic_focus: ["Iran"]
+  "farsnews.ir":
+    tier: 2
+    geographic_focus: ["Iran"]
+
+  # --- Tier 3-4: Specialist / energy / regional ---
+  "opec.org":
+    tier: 4
+    geographic_focus: ["Global", "Gulf States"]
+  "eia.gov":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+  "oilprice.com":
+    tier: 3
+    geographic_focus: ["Global"]
+  "middleeasteye.net":
+    tier: 3
+    geographic_focus: ["Middle East"]
+  "al-monitor.com":
+    tier: 3
+    geographic_focus: ["Middle East"]
+  "mei.edu":
+    tier: 3
+    geographic_focus: ["Middle East"]
+  "crisisgroup.org":
+    tier: 4
+    geographic_focus: ["Global"]
+  "amnesty.org":
+    tier: 4
+    geographic_focus: ["Global"]
+  "hrw.org":
+    tier: 4
+    geographic_focus: ["Global"]
+  "sipri.org":
+    tier: 4
+    geographic_focus: ["Global"]
+  "chathamhouse.org":
+    tier: 4
+    geographic_focus: ["Global", "Europe"]
+  "brookings.edu":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+  "csis.org":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+  "rand.org":
+    tier: 4
+    geographic_focus: ["Global", "North America"]
+
+  # Gulf / regional
+  "arabnews.com":
+    tier: 3
+    geographic_focus: ["Gulf States", "Middle East"]
+  "thenationalnews.com":
+    tier: 3
+    geographic_focus: ["Gulf States", "UAE"]
+  "gulfnews.com":
+    tier: 3
+    geographic_focus: ["Gulf States", "UAE"]
+  "timesofisrael.com":
+    tier: 3
+    geographic_focus: ["Israel", "Middle East"]
+  "haaretz.com":
+    tier: 4
+    geographic_focus: ["Israel", "Middle East"]
+  "jpost.com":
+    tier: 3
+    geographic_focus: ["Israel", "Middle East"]
+
+  # India / South Asia
+  "hindustantimes.com":
+    tier: 3
+    geographic_focus: ["India", "South Asia"]
+  "ndtv.com":
+    tier: 3
+    geographic_focus: ["India"]
+  "dawn.com":
+    tier: 3
+    geographic_focus: ["Pakistan", "South Asia"]
+
+  # Japan / East Asia
+  "nhk.or.jp":
+    tier: 4
+    geographic_focus: ["Japan", "Asia"]
+  "japantimes.co.jp":
+    tier: 3
+    geographic_focus: ["Japan"]
+
+by_name:
+  "Reuters": {tier: 5, geographic_focus: ["Global"]}
+  "Associated Press": {tier: 5, geographic_focus: ["Global"]}
+  "AP": {tier: 5, geographic_focus: ["Global"]}
+  "AFP": {tier: 5, geographic_focus: ["Global"]}
+  "Agence France-Presse": {tier: 5, geographic_focus: ["Global"]}
+  "BBC": {tier: 4, geographic_focus: ["Global", "Europe"]}
+  "CNN": {tier: 4, geographic_focus: ["Global", "North America"]}
+  "Al Jazeera": {tier: 4, geographic_focus: ["Middle East", "Global"]}
+  "Bloomberg": {tier: 4, geographic_focus: ["Global"]}
+  "Financial Times": {tier: 4, geographic_focus: ["Global", "Europe"]}
+  "IRNA": {tier: 3, geographic_focus: ["Iran"]}
+  "TASS": {tier: 3, geographic_focus: ["Russia", "Global"]}
+  "Xinhua": {tier: 3, geographic_focus: ["China", "Global"]}
+  "France 24": {tier: 4, geographic_focus: ["Global", "Africa"]}
+  "United Nations": {tier: 5, geographic_focus: ["Global"]}
+  "UNHCR": {tier: 5, geographic_focus: ["Global"]}
+  "World Bank": {tier: 5, geographic_focus: ["Global"]}
+  "IMF": {tier: 5, geographic_focus: ["Global"]}
+  "IAEA": {tier: 5, geographic_focus: ["Global"]}
+  "Amnesty International": {tier: 4, geographic_focus: ["Global"]}
+  "Human Rights Watch": {tier: 4, geographic_focus: ["Global"]}
+
+tld_defaults:
+  ".gov": 3
+  ".gov.ir": 3
+  ".gov.tr": 3
+  ".gov.ru": 3
+  ".mil": 3
+  ".edu": 3
+  ".ac.uk": 3
+  ".org": 2
