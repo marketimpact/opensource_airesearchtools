@@ -1,0 +1,27 @@
+# Salience weights for the briefing routine. Pattern 10 — keep this transparent
+# and tunable, never a magic number in code.
+#
+# Each component contributes a value in [0, 1] before being multiplied by its
+# weight. Weights need not sum to 1; the briefing reports the raw breakdown so
+# the user can see why an item ranked where it did.
+
+weights:
+  composite_score: 0.30      # the existing 5-dim score, normalised to 0-1
+  recency: 0.20              # 1.0 today, decays linearly to 0 at 30 days
+  corroboration: 0.15        # the corroboration sub-score, normalised
+  contradiction_pressure: 0.20  # 1.0 if this finding has open contradictions
+  stale_review_overdue: 0.15  # 1.0 if a prediction's review_date has passed
+
+# Boolean overrides — applied after the weighted sum.
+boost:
+  pinned: 0.20      # human pinned this item, never let it sink
+  cross_language_corroborated: 0.10
+penalty:
+  noise: 0.30       # human marked similar items as noise
+  unreliable_tier: 0.40
+
+# Stale window for predictions/facts whose review is overdue (days).
+stale_after_days: 30
+
+# How recent a corroborator must be to count as "fresh" (days).
+fresh_corroborator_days: 14

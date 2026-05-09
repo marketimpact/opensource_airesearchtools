@@ -7,7 +7,12 @@ __pycache__/
 data/findings.md
 data/findings_index.json
 data/findings_history.json
+data/contradictions.jsonl
+data/feedback.jsonl
 data/logs/*.log
+
+# Test cache
+.pytest_cache/
 
 # macOS
 .DS_Store

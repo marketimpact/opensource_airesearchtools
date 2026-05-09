@@ -11,6 +11,8 @@ from research.analyzer import analyze_results
 from research.scorer import load_authority_db, load_history, save_history, score_findings
 from research.dedup import load_index, save_index, deduplicate
 from research.logger import append_findings, write_run_log
+from research.contradictions import detect_contradictions
+from research.store import WorkspaceStore
 
 logging.basicConfig(
     level=logging.INFO,
@@ -107,6 +109,7 @@ def run():
         "findings_rejected": 0,
         "duplicates_skipped": 0,
         "new_findings": 0,
+        "contradictions_detected": 0,
         "errors": 0,
         "avg_composite_score": 0.0,
         "tier_counts": {"Verified": 0, "Likely": 0, "Unverified": 0, "Unreliable": 0},
@@ -189,6 +192,24 @@ def run():
     stats["duplicates_skipped"] = len(accepted) - len(new_findings)
     stats["new_findings"] = len(new_findings)
     save_index(index, index_path)
+
+    # Contradiction detection (Pattern 6 — structural alert propagation).
+    # Compare each new finding against the recent history that drove
+    # corroboration scoring. The store appends contradictions append-only;
+    # the human reviews them via the briefing.
+    if new_findings:
+        contradictions = detect_contradictions(new_findings, history)
+        if contradictions:
+            store = WorkspaceStore(
+                history_path=history_path,
+                index_path=index_path,
+            )
+            store.append_contradictions(contradictions)
+            stats["contradictions_detected"] = len(contradictions)
+            log.info(
+                f"  Detected {len(contradictions)} possible contradiction(s) "
+                f"-- review with `python -m research.brief`."
+            )
 
     # Save to history
     save_history(history_path, history, new_findings)

@@ -150,6 +150,7 @@ def write_run_log(log_dir: Path, stats: dict):
         f"Findings rejected:      {stats.get('findings_rejected', 0)}",
         f"Duplicates skipped:     {stats.get('duplicates_skipped', 0)}",
         f"New findings logged:    {stats.get('new_findings', 0)}",
+        f"Contradictions:         {stats.get('contradictions_detected', 0)}",
         f"Errors:                 {stats.get('errors', 0)}",
         "",
     ]

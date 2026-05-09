@@ -9,22 +9,9 @@ from urllib.parse import urlparse
 
 import yaml
 
+from research.constants import DEFAULT_WEIGHTS, TIER_THRESHOLDS, classify_tier
+
 log = logging.getLogger(__name__)
-
-DEFAULT_WEIGHTS = {
-    "source_reliability": 0.30,
-    "corroboration": 0.25,
-    "specificity": 0.20,
-    "recency": 0.15,
-    "geographic_relevance": 0.10,
-}
-
-TIER_THRESHOLDS = {
-    "Verified": 4.0,
-    "Likely": 3.0,
-    "Unverified": 2.0,
-    # Below 2.0 = "Unreliable"
-}
 
 # Regex patterns for specificity scoring
 RE_NUMBERS = re.compile(
@@ -403,12 +390,5 @@ def _jaccard(set_a: set, set_b: set) -> float:
 
 
 def _classify_tier(composite: float) -> str:
-    """Map composite score to quality tier."""
-    if composite >= TIER_THRESHOLDS["Verified"]:
-        return "Verified"
-    elif composite >= TIER_THRESHOLDS["Likely"]:
-        return "Likely"
-    elif composite >= TIER_THRESHOLDS["Unverified"]:
-        return "Unverified"
-    else:
-        return "Unreliable"
+    """Map composite score to quality tier (delegates to shared constants)."""
+    return classify_tier(composite)
